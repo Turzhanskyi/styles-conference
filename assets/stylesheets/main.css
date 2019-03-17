@@ -91,6 +91,7 @@ h5 {
     color: #a9b2b9;
     font-size: 14px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 strong {
     font-weight: 400;
@@ -103,11 +104,15 @@ cite, em {
             Гіперсилки
   ------------------------------------------
 */
+a {
+    color: #648880;
+    text-decoration: none;
+}
 a:hover {
     color: #a9b2b9;
 }
-a {
-    color: #648880;
+p a {
+    border-bottom: 1px solid #dfe2e5;
 }
 /*
   ------------------------------------------
@@ -131,6 +136,7 @@ a {
 }
 .tagline {
     margin: 66px 0 22px 0;
+    text-align: right;
 }
 /*
   ------------------------------------------
@@ -140,6 +146,11 @@ a {
 .primary-nav {
     font-size: 14px;
     font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+.nav {
+    text-align: right;
 }
 /*
   ------------------------------------------
@@ -221,6 +232,7 @@ a {
 .hero {
     line-height: 44px;
     padding: 22px 80px 66px 80px;
+    text-align: center;
 }
 .hero h2 {
     font-size: 36px;
