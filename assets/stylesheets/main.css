@@ -54,7 +54,6 @@ table {
             ТИПОГРАФІКА
   ==========================================
 */
-
 /*
   ------------------------------------------
         додаємо властивості шрифтів і
@@ -62,113 +61,9 @@ table {
   ------------------------------------------
 */
 body {
+    background: #293f50;
     color: #888;
     font: 300 16px/22px "Roboto", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-p {
-    margin-bottom: 22px;
-}
-h1, h2, h3, h4 {
-    color: #648880;
-    margin-bottom: 22px;
-}
-h1 {
-    font-size: 36px;
-    line-height: 44px;
-}
-h2 {
-    font-size: 24px;
-    line-height: 44px;
-}
-h3 {
-    font-size: 21px;
-}
-h4 {
-    font-size: 18px;
-}
-h5 {
-    margin-bottom: 22px;
-    color: #a9b2b9;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-strong {
-    font-weight: 400;
-}
-cite, em {
-    font-style: italic;
-}
-/*
-  ------------------------------------------
-            Гіперсилки
-  ------------------------------------------
-*/
-a {
-    color: #648880;
-    text-decoration: none;
-}
-a:hover {
-    color: #a9b2b9;
-}
-p a {
-    border-bottom: 1px solid #dfe2e5;
-}
-/*
-  ------------------------------------------
-  Колір гіперсилок для 3 блочних елементів
-  ------------------------------------------
-*/
-.teaser a:hover h3 {
-    color: #a9b2b9;
-}
-/*
-  ------------------------------------------
-            Логотип
-  ------------------------------------------
-*/
-.logo {
-    border-top: 4px solid #648880;
-    float: left;
-    font-size: 48px;
-    font-weight: 100;
-    letter-spacing: 0.5px;
-    line-height: 44px;
-    padding: 40px 0 22px 0;
-    text-transform: uppercase;
-}
-.tagline {
-    margin: 66px 0 22px 0;
-    text-align: right;
-}
-/*
-  ------------------------------------------
-       Навігаційне меню після логотипу
-  ------------------------------------------
-*/
-.primary-nav {
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-.nav {
-    text-align: right;
-}
-/*
-  ------------------------------------------
-       Навігаційне меню у <footer>
-  ------------------------------------------
-*/
-.primary-footer {
-    color: #648880;
-    font-size: 14px;
-    padding-bottom: 44px;
-    padding-top: 44px;
-}
-.primary-footer small {
-    float: left;
-    font-weight: 400;
 }
 /*
   ==========================================
@@ -199,6 +94,17 @@ p a {
 }
 /*
   ------------------------------------------
+  Задаємо відступи між 3 блоками макету
+  ------------------------------------------
+*/
+.grid,
+.col-1-3,
+.col-2-3 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*
+  ------------------------------------------
   Створюємо макет з 3 колонок використовуючи
   рядково-блочні елементи; ширина однієї 1/3,
   а інша - 2/3 від ширини сторінки
@@ -214,35 +120,6 @@ p a {
 }
 .col-2-3 {
     width: 66.66%;
-}
-/*
-  ------------------------------------------
-  Задаємо відступи між 3 блоками макету
-  ------------------------------------------
-*/
-.grid,
-.col-1-3,
-.col-2-3 {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-/*
-  ------------------------------------------
-  Встановлюємо межу padding для усіх чотирьох
-  сторін елемента <section>
-  ------------------------------------------
-*/
-.hero {
-    line-height: 44px;
-    padding: 22px 80px 66px 80px;
-    text-align: center;
-}
-.hero h2 {
-    font-size: 36px;
-}
-.hero p {
-    font-size: 24px;
-    font-weight: 100;
 }
 /*
   ------------------------------------------
@@ -263,34 +140,107 @@ p a {
     *zoom: 1;
 }
 /*
+  ==========================================
+                 ПОЛОСИ
+  ==========================================
+*/
+.row,
+.row-alt{
+    min-width: 960px;
+}
+.row {
+    background: #fff;
+    padding: 66px 0 44px 0;
+}
+.row-alt {
+    background: #cbe2c1;
+    background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
+    background: linear-gradient(to right, #a1d3b0, #f6f1d3);
+    padding: 44px 0 22px 0;
+}
+/*
+==========================================
+                ТИПОГРАФІКА
+==========================================
+*/
+h1, h2, h3, h4 {
+    color: #648880;
+}
+h1, h3, h4, h5, p {
+    margin-bottom: 22px;
+}
+h1 {
+    font-size: 36px;
+    line-height: 44px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 44px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    color: #a9b2b9;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+strong {
+    font-weight: 400;
+}
+cite, em {
+    font-style: italic;
+}
+/*
+  ========================================
+              ВСТУП
+  ========================================
+*/
+.lead {
+    text-align: center;
+}
+.lead p {
+    font-size: 21px;
+    line-height: 33px;
+}
+    /*
   ------------------------------------------
-  Основний заголовок
-  (логотип) Styles Conference
+            Гіперсилки
   ------------------------------------------
 */
-.logo {
-    border-top: 4px solid #648880;
-    padding: 40px 0 22px 0;
-    float: left;
+a {
+    color: #648880;
+    text-decoration: none;
+}
+a:hover {
+    color: #a9b2b9;
+}
+p a {
+    border-bottom: 1px solid #dfe2e5;
 }
 /*
   ------------------------------------------
-  Основний підвал для елемента <footer>
+       Колір ссилок білий, а коли
+       наводимо курсор - зелений
   ------------------------------------------
 */
-.primary-footer small {
-    float: left;
+.primary-header a,
+.primary-footer a {
+    color: #fff;
 }
-.primary-footer {
-    padding-bottom: 44px;
-    padding-top: 44px;
-}
+.primary-header a:hover,
+.primary-footer a:hover {
+    color: #648880;
 /*
   ==========================================
             КНОПКИ
   ==========================================
 */
-
 /*
   ------------------------------------------
   Кнопки заокругленої форми, які є оремим
@@ -300,8 +250,13 @@ p a {
 */
 .btn {
     border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
     display: inline-block;
+    font-weight: 400;
+    letter-spacing: .5px;
     margin: 0;
+    text-transform: uppercase;
 }
 /*
   ------------------------------------------
@@ -312,6 +267,96 @@ p a {
   ------------------------------------------
 */
 .btn-alt {
-    border: 1px solid #dfe2e5;
+    border: 1px solid #fff;
     padding: 10px 30px;
+}
+.btn-alt:hover {
+    background: #fff;
+    color: #648880;
+}
+/*
+  ==========================================
+                Основний заголовок
+          (логотип) Styles Conference
+  ==========================================
+*/
+.logo {
+    border-top: 4px solid #648880;
+    float: left;
+    font-size: 48px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+    line-height: 44px;
+    padding: 40px 0 22px 0;
+    text-transform: uppercase;
+}
+.tagline {
+    margin: 66px 0 22px 0;
+    text-align: right;
+}
+/*
+  ------------------------------------------
+       Навігаційне меню після логотипу
+  ------------------------------------------
+*/
+.primary-nav {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+/*
+  ------------------------------------------
+       Навігаційне меню у <footer>
+  ------------------------------------------
+*/
+.primary-footer {
+    color: #648880;
+    font-size: 14px;
+    padding-bottom: 44px;
+    padding-top: 44px;
+}
+.primary-footer small {
+    float: left;
+    font-weight: 400;
+}
+/*
+  ------------------------------------------
+       Навігація
+  ------------------------------------------
+*/
+.nav {
+    text-align: right;
+}
+/*
+  ==========================================
+               ГОЛОВНА СТОРІНКА
+  ==========================================
+*/
+/*
+  ------------------------------------------
+  Встановлюємо межу padding для усіх чотирьох
+  сторін елемента <section>
+  ------------------------------------------
+*/
+.hero {
+    color: #fff;
+    line-height: 44px;
+    padding: 22px 80px 66px 80px;
+    text-align: center;
+}
+.hero h2 {
+    font-size: 36px;
+}
+.hero p {
+    font-size: 24px;
+    font-weight: 100;
+}
+/*
+  ------------------------------------------
+  Колір гіперсилок для 3 блочних елементів
+  ------------------------------------------
+*/
+.teaser a:hover h3 {
+    color: #a9b2b9;
 }
